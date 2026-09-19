@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>中老年广场舞大全-精选舞曲教学与健康舞步指南</title>
+    <meta name="description" content="提供最新最全的中老年广场舞大全，包含热门舞曲推荐、分步教学视频、动作分解以及适合中老年人的健身舞步。帮助中老年朋友轻松学会广场舞，强身健体，丰富晚年生活。">
+    <meta name="keywords" content="中老年广场舞大全,广场舞教学,中老年健身舞,热门广场舞曲,广场舞动作分解">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e67e22;
+            --primary-dark: #d35400;
+            --secondary-color: #2c3e50;
+            --accent-color: #f1c40f;
+            --text-color: #333;
+            --text-light: #666;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-dark);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .search-box button {
+            padding: 0 30px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 5px solid var(--primary-color);
+            color: var(--secondary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .more-link {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: normal;
+        }
+
+        .more-link:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .video-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .thumbnail {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: #000;
+        }
+
+        .thumbnail img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0,0,0,0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            line-height: 1.4;
+        }
+
+        .card-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .tag.hard {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+
+        .tag.easy {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 10px;
+        }
+
+        .rank-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background-color: #ff4757; }
+        .rank-list li:nth-child(2) .rank-num { background-color: #ffa502; }
+        .rank-list li:nth-child(3) .rank-num { background-color: #2ed573; }
+
+        .rank-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+        }
+
+        .rank-info span {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: var(--white);
+            padding: 50px 20px;
+            margin-top: 50px;
+        }
+
+        .guide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .guide-item {
+            text-align: center;
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: var(--radius);
+            transition: box-shadow 0.3s;
+        }
+
+        .guide-item:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .guide-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .guide-item h3 {
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .guide-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #bdc3c7;
+            padding: 50px 20px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #34495e;
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 20px;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+            
+            .search-box button {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="#" class="logo">
+            <span>💃</span> 舞步天下
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">热门舞曲</a></li>
+                <li><a href="#">教学视频</a></li>
+                <li><a href="#">健康资讯</a></li>
+                <li><a href="#">舞队风采</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="cta-btn">加入社区</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>中老年广场舞大全</h1>
+        <p>精选海量舞曲，专业分步教学。让您的晚年生活更加健康、快乐、时尚。</p>
+        <div class="search-box">
+            <input type="text" placeholder="输入舞曲名称（如：最炫民族风）...">
+            <button>搜索</button>
+        </div>
+    </div>
+</section>
+
+<main class="container">
+    <!-- Left Content -->
+    <section class="main-content">
+        <div class="section-title">
+            <span>🔥 热门推荐舞曲</span>
+            <a href="#" class="more-link">查看更多 &gt;</a>
+        </div>
+
+        <div class="video-grid">
+            <!-- Card 1 -->
+            <article class="video-card">
+                <div class="thumbnail">
+                    <img src="https://picsum.photos/seed/dance1/400/225" alt="广场舞教学视频封面">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">【简单易学】最炫民族风 - 广场舞分解教学</h3>
+                    <div class="card-meta">
+                        <span class="tag easy">入门</span>
+                        <span>播放 12.5w</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="video-card">
+                <div class="thumbnail">
+                    <img src="https://picsum.photos/seed/dance2/400/225" alt="广场舞教学视频封面">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">【燃情版】荷塘月色 - 慢速标准舞步教学</h3>
+                    <div class="card-meta">
+                        <span class="tag easy">标准</span>
+                        <span>播放 8.2w</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="video-card">
+                <div class="thumbnail">
+                    <img src="https://picsum.photos/seed/dance3/400/225" alt="广场舞教学视频封面">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">【健身操】手语舞 - 感恩的心 - 养生保健</h3>
+                    <div class="card-meta">
+                        <span class="tag easy">养生</span>
+                        <span>播放 15.1w</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="video-card">
+                <div class="thumbnail">
+                    <img src="https://picsum.photos/seed/dance4/400/225" alt="广场舞教学视频封面">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">【进阶】小苹果 - 精品卡点版教学</h3>
+                    <div class="card-meta">
+                        <span class="tag hard">进阶</span>
+                        <span>播放 20.3w</span>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Card 5 -->
+            <article class="video-card">
+                <div class="thumbnail">
+                    <img src="https://picsum.photos/seed/dance5/400/225" alt="广场舞教学视频封面">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">【国风】青花瓷 - 气质古典舞教学</h3>
+                    <div class="card-meta">
+                        <span class="tag easy">气质</span>
+                        <span>播放 9.8w</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="video-card">
+                <div class="thumbnail">
+                    <img src="https://picsum.photos/seed/dance6/400/225" alt="广场舞教学视频封面">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">【活力】健康歌 - 老少皆宜健身操</h3>
+                    <div class="card-meta">
+                        <span class="tag easy">活力</span>
+                        <span>播放 18.6w</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="section-title" style="margin-top: 50px;">
+            <span>📚 广场舞入门指南</span>
+        </div>
+
+        <div class="guide-grid">
+            <div class="guide-item">
+                <div class="guide-icon">👟</div>
+                <h3>如何选择舞鞋</h3>
+                <p>中老年朋友选择广场舞鞋应注重防滑、减震和透气性，保护膝盖和脚踝健康。</p>
+            </div>
+            <div class="guide-item">
+                <div class="guide-icon">⏰</div>
+                <h3>最佳运动时间</h3>
+                <p>建议选择傍晚或清晨，避开正午高温时段，每次运动控制在45-60分钟为宜。</p>
+            </div>
+            <div class="guide-item">
+                <div class="guide-icon">🤕</div>
+                <h3>常见运动损伤</h3>
+                <p>了解脚踝扭伤、半月板损伤的预防与处理方法，科学健身远离伤痛。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Right Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-widget">
+            <h3>🏆 本周热门排行</h3>
+            <ul class="rank-list">
+                <li>
+                    <div class="rank-num">1</div>
+                    <div class="rank-info">
+                        <h4>最炫民族风</h4>
+                        <span>播放量 125万</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="rank-num">2</div>
+                    <div class="rank-info">
+                        <h4>荷塘月色</h4>
+                        <span>播放量 98万</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="rank-num">3</div>
+                    <div class="rank-info">
+                        <h4>小苹果</h4>
+                        <span>播放量 86万</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="rank-num">4</div>
+                    <div class="rank-info">
+                        <h4>好运来</h4>
+                        <span>播放量 72万</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="rank-num">5</div>
+                    <div class="rank-info">
+                        <h4>天涯歌女</h4>
+                        <span>播放量 65万</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-widget">
+            <h3>🎵 舞曲分类导航</h3>
+            <ul class="rank-list">
+                <li><a href="#">怀旧经典</a></li>
+                <li><a href="#">流行热歌</a></li>
+                <li><a href="#">民族风情</a></li>
+                <li><a href="#">佛经音乐</a></li>
+                <li><a href="#">戏曲选段</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-widget">
+            <h3>💡 运动小贴士</h3>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">
+                运动前请务必进行热身拉伸，运动后进行放松整理，可以有效预防肌肉酸痛。
+            </p>
+            <a href="#" style="color: var(--primary-color); font-size: 0.9rem; font-weight: bold;">查看更多贴士 &gt;</a>
+        </div>
+    </aside>
+</main>
+
+<section class="guide-section">
+    <div class="guide-container">
+        <div class="section-title">
+            <span>❓ 常见问题解答</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px;">
+            <details style="background: white; padding: 15px; border-radius: 8px; border: 1px solid #eee;">
+                <summary style="font-weight: bold; cursor: pointer; color: var(--secondary-color);">广场舞适合多大年龄的人跳？</summary>
+                <p style="margin-top: 10px; font-size: 0.95rem; color: #555;">
+                    广场舞对年龄限制较小，通常建议60岁以上的中老年朋友参与。只要身体条件允许，没有严重的心脏病或关节疾病，都可以参与。建议从慢节奏、简单动作的舞曲开始。
+                </p>
+            </details>
+            <details style="background: white; padding: 15px; border-radius: 8px; border: 1px solid #eee;">
+                <summary style="font-weight: bold; cursor: pointer; color: var(--secondary-color);">跳舞对身体健康有什么好处？</summary>
+                <p style="margin-top: 10px; font-size: 0.95rem; color: #555;">
+                    广场舞是一种全身性的有氧运动，能够增强心肺功能，提高身体协调性和平衡能力，有助于预防骨质疏松和老年痴呆，同时还能丰富社交生活，缓解孤独感。
+                </p>
+            </details>
+            <details style="background: white; padding: 15px; border-radius: 8px; border: 1px solid #eee;">
+                <summary style="font-weight: bold; cursor: pointer; color: var(--secondary-color);">初学者应该怎么开始学跳？</summary>
+                <p style="margin-top: 10px; font-size: 0.95rem; color: #555;">
+                    建议先观看我们的入门教学视频，跟着节奏练习基本步伐。先掌握步伐再学习手臂动作，不要急于求成。多参加线下舞队交流，互相学习进步更快。
+                </p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>舞步天下</h4>
+            <p style="font-size: 0.9rem; line-height: 1.8;">
+                专注于中老年朋友的在线舞蹈学习平台。提供海量舞曲、专业教学视频和健康运动指导，致力于服务每一位热爱生活、追求健康的舞友。
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>快速链接</h4>
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">免责声明</a></li>
+                <li><a href="#">隐私政策</a></li>
+                <li><a href="#">联系合作</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>热门分类</h4>
+            <ul>
+                <li><a href="#">健身操</a></li>
+                <li><a href="#">民族舞</a></li>
+                <li><a href="#">交谊舞</a></li>
+                <li><a href="#">扇子舞</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>联系方式</h4>
+            <ul>
+                <li>服务热线：400-123-4567</li>
+                <li>电子邮箱：contact@wubutianxia.com</li>
+                <li>工作时间：9:00 - 18:00</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 舞步天下. 保留所有权利. 本站内容仅供学习交流使用.</p>
+    </div>
+</footer>
+
+</body>
+                      </html>
