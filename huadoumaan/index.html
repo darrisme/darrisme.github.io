@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="花都马鞍山公园官网为您提供马鞍山公园的详细介绍、景点特色、游览指南、开放时间及交通路线。探索这座位于广州市花都区的城市绿肺，享受自然风光与休闲时光。">
+    <meta name="keywords" content="花都马鞍山公园, 马鞍山公园, 广州花都公园, 花都旅游景点, 马鞍山登山, 花都马鞍山">
+    <title>花都马鞍山公园-广州花都城市绿肺与休闲游览指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #81c784;
+            --accent-color: #fdd835;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f5f7fa;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 90%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #1b5e20;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            height: var(--header-height);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 85vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/mountainpark/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding-top: var(--header-height);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        /* Info Section */
+        .info-section {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .info-image img {
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .info-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .info-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .feature-list {
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .feature-icon {
+            background-color: rgba(46, 125, 50, 0.1);
+            color: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 5rem 0;
+            background-color: var(--bg-light);
+        }
+
+        .attraction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background-color: #e8f5e9;
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .card-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .guide-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .guide-item {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .guide-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .guide-item p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .guide-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .guide-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Map Section */
+        .map-section {
+            padding: 0;
+            height: 400px;
+            background-color: #ddd;
+            position: relative;
+        }
+        
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e0e0e0;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                display: none; /* Simplified for static demo */
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                🌲 <span>马鞍山公园</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#about">公园概况</a></li>
+                    <li><a href="#attractions">景点推荐</a></li>
+                    <li><a href="#guide">游览指南</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>花都马鞍山公园</h1>
+                <p>城市绿肺 · 登高望远 · 生态休闲</p>
+                <div class="hero-buttons">
+                    <a href="#guide" class="btn btn-primary">立即游览</a>
+                    <a href="#about" class="btn btn-outline">了解详情</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-image">
+                        <img src="https://picsum.photos/seed/mountainview/600/400.jpg" alt="马鞍山公园全景">
+                    </div>
+                    <div class="info-text">
+                        <h2>城市中的自然氧吧</h2>
+                        <p>花都马鞍山公园位于广州市花都区新华镇，是集生态保护、休闲游览、健身运动于一体的综合性城市公园。公园依山而建，植被茂密，空气清新，是市民日常休闲、周末郊游的理想去处。</p>
+                        <p>公园内设有完善的登山步道、观景平台和儿童游乐设施，不仅能满足不同年龄层游客的需求，还能让游客在繁忙的都市生活中找到一片宁静的绿洲。登顶远眺，可俯瞰花都城区全貌，感受城市与自然的和谐交融。</p>
+                        
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">🌿</div>
+                                <div>
+                                    <h4>生态植被丰富</h4>
+                                    <p>拥有多种亚热带植物，是天然的氧吧。</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">⛰️</div>
+                                <div>
+                                    <h4>登山健身胜地</h4>
+                                    <p>多条登山路线，适合徒步与健身爱好者。</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">📸</div>
+                                <div>
+                                    <h4>绝佳摄影点位</h4>
+                                    <p>山顶观景台是拍摄花都日出的最佳位置之一。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="attractions-section">
+            <div class="container">
+                <h2 class="section-title">热门景点</h2>
+                <p class="section-subtitle">探索公园内的自然奇观与人文景观</p>
+                
+                <div class="attraction-grid">
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/lake/400/300.jpg" alt="人工湖">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">自然景观</span>
+                            <h3 class="card-title">镜湖映月</h3>
+                            <p class="card-desc">公园中心的人工湖波光粼粼，湖畔垂柳依依，是晨练和摄影的热门地点。</p>
+                            <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">查看详情</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/temple/400/300.jpg" alt="古庙">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">人文古迹</span>
+                            <h3 class="card-title">马鞍古庙</h3>
+                            <p class="card-desc">历史悠久的古建筑，承载着当地的文化记忆，香火鼎盛。</p>
+                            <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">查看详情</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/viewpoint/400/300.jpg" alt="观景台">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">登高望远</span>
+                            <h3 class="card-title">云顶观景台</h3>
+                            <p class="card-desc">位于公园最高处，360度无死角俯瞰花都美景，视野开阔。</p>
+                            <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">查看详情</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="guide-section">
+            <div class="container">
+                <h2 class="section-title">游览指南</h2>
+                <p class="section-subtitle">为您提供实用的入园信息与服务提示</p>
+                
+                <div class="guide-container">
+                    <div class="guide-item">
+                        <h3>📍 开放时间</h3>
+                        <p>公园全年无休，全天开放。</p>
+                        <ul class="guide-list">
+                            <li>每日 06:00 - 22:00</li>
+                            <li>建议游览时长：2 - 4 小时</li>
+                            <li>登山步道至山顶约需 1.5 - 2 小时</li>
+                        </ul>
+                    </div>
+
+                    <div class="guide-item">
+                        <h3>🚗 交通路线</h3>
+                        <p>自驾与公共交通均可便捷到达。</p>
+                        <ul class="guide-list">
+                            <li><strong>自驾：</strong>导航至“花都马鞍山公园”停车场。</li>
+                            <li><strong>公交：</strong>乘坐花都公交X5、X25路至“马鞍山公园站”下车。</li>
+                            <li><strong>地铁：</strong>乘坐地铁9号线至“花都汽车城站”，换乘出租车约15分钟。</li>
+                        </ul>
+                    </div>
+
+                    <div class="guide-item">
+                        <h3>🎫 门票信息</h3>
+                        <p>公园对公众免费开放。</p>
+                        <ul class="guide-list">
+                            <li>内部游乐设施需另行收费</li>
+                            <li>停车场收费标准：小型车首小时免费，后续每小时5元</li>
+                            <li>建议携带饮用水，山顶无售卖点</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section id="contact" class="map-section">
+            <div class="map-placeholder">
+                [地图定位区域 - 花都区马鞍山公园]
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>马鞍山公园</h4>
+                    <p>致力于为市民提供优质的绿色休闲空间，守护城市生态，传承地方文化。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">公园简介</a></li>
+                        <li><a href="#">景点导览</a></li>
+                        <li><a href="#">活动公告</a></li>
+                        <li><a href="#">游客服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul class="footer-links">
+                        <li>电话：020-12345678</li>
+                        <li>邮箱：info@example.com</li>
+                        <li>地址：广州市花都区新华镇马鞍山公园</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 花都马鞍山公园管理方. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
