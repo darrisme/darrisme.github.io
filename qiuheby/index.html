@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="囚鹤BY听灯 - 沉浸式古风悬疑情感漫画在线阅读平台，收录经典古风、悬疑、虐恋题材，提供高清全彩、无广告阅读体验。">
+    <meta name="keywords" content="囚鹤BY听灯,囚鹤,听灯,古风漫画,古风悬疑,耽美漫画,在线漫画,免费漫画">
+    <title>囚鹤BY听灯 - 经典古风悬疑情感漫画在线阅读</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f9f7f2;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .header-actions button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .header-actions button:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjwvc3ZnPg==');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .hero-stats strong {
+            font-size: 20px;
+            color: #fff;
+        }
+
+        /* 内容区 */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* 漫画列表 */
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: normal;
+        }
+
+        .comic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .comic-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .comic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .comic-cover {
+            position: relative;
+            padding-top: 140%; /* 5:7 Aspect Ratio */
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .comic-cover img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .comic-info {
+            padding: 15px;
+        }
+
+        .comic-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .comic-meta {
+            font-size: 12px;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .comic-tags span {
+            background-color: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-right: 5px;
+            color: #666;
+        }
+
+        /* 侧边栏 */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .widget-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .rank-num {
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background-color: #ff4757; }
+        .rank-list li:nth-child(2) .rank-num { background-color: #ffa502; }
+        .rank-list li:nth-child(3) .rank-num { background-color: #2ed573; }
+
+        .rank-name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex-grow: 1;
+        }
+
+        .rank-score {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .tags-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            font-size: 12px;
+            padding: 4px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            transition: all 0.2s;
+        }
+
+        .tag:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* 专区介绍 */
+        .intro-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .intro-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro-header h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .intro-item {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        .intro-item:hover {
+            border-color: var(--accent-color);
+        }
+
+        .intro-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .intro-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .intro-item p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--primary-color);
+            color: #ecf0f1;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #95a5a6;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .content-grid { grid-template-columns: 1fr; }
+            .header-inner { flex-direction: column; height: auto; padding: 15px 0; gap: 15px; }
+            nav ul { gap: 15px; font-size: 14px; }
+            .header-actions { width: 100%; }
+            .header-actions button { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>囚鹤</span>BY听灯
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">全站漫画</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#">作者专区</a></li>
+                    <li><a href="#">更新日志</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button>登录 / 注册</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-tag">热门推荐</span>
+                <h1>囚鹤BY听灯</h1>
+                <p>古风悬疑与极致情感的交织。一段关于囚禁、救赎与灵魂羁绊的凄美故事，邀您共赏。</p>
+                <div class="hero-stats">
+                    <div><strong>9.8</strong> 评分</div>
+                    <div><strong>2.5M</strong> 阅读</div>
+                    <div><strong>12</strong> 卷完结</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 专区介绍 -->
+            <section class="intro-section">
+                <div class="intro-header">
+                    <h2>关于《囚鹤》</h2>
+                    <p style="color: var(--text-secondary);">听灯老师笔下的经典之作，带你走进那个波诡云谲的朝堂与江湖</p>
+                </div>
+                <div class="intro-grid">
+                    <div class="intro-item">
+                        <span class="intro-icon">📜</span>
+                        <h3>古风权谋</h3>
+                        <p>错综复杂的朝堂局势，步步惊心的政治博弈。</p>
+                    </div>
+                    <div class="intro-item">
+                        <span class="intro-icon">💔</span>
+                        <h3>虐恋情深</h3>
+                        <p>相爱相杀的情感纠葛，在绝望中寻找希望的火花。</p>
+                    </div>
+                    <div class="intro-item">
+                        <span class="intro-icon">🎭</span>
+                        <h3>角色鲜明</h3>
+                        <p>性格迥异的人物设定，演绎出最真实的悲欢离合。</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="content-grid">
+                <!-- 左侧内容区 -->
+                <section>
+                    <div class="section-title">
+                        <span>最新更新</span>
+                        <a href="#">查看更多 &gt;</a>
+                    </div>
+                    <div class="comic-grid">
+                        <!-- 模拟卡片 1 -->
+                        <article class="comic-card">
+                            <div class="comic-cover">
+                                <img src="https://picsum.photos/seed/comic1/300/420" alt="囚鹤封面">
+                            </div>
+                            <div class="comic-info">
+                                <h3 class="comic-title">第12卷：破晓</h3>
+                                <div class="comic-meta">
+                                    <span>2023-10-24</span>
+                                    <span>全彩</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- 模拟卡片 2 -->
+                        <article class="comic-card">
+                            <div class="comic-cover">
+                                <img src="https://picsum.photos/seed/comic2/300/420" alt="囚鹤封面">
+                            </div>
+                            <div class="comic-info">
+                                <h3 class="comic-title">第11卷：迷雾</h3>
+                                <div class="comic-meta">
+                                    <span>2023-10-18</span>
+                                    <span>全彩</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- 模拟卡片 3 -->
+                        <article class="comic-card">
+                            <div class="comic-cover">
+                                <img src="https://picsum.photos/seed/comic3/300/420" alt="囚鹤封面">
+                            </div>
+                            <div class="comic-info">
+                                <h3 class="comic-title">第10卷：归途</h3>
+                                <div class="comic-meta">
+                                    <span>2023-10-10</span>
+                                    <span>全彩</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- 模拟卡片 4 -->
+                        <article class="comic-card">
+                            <div class="comic-cover">
+                                <img src="https://picsum.photos/seed/comic4/300/420" alt="囚鹤封面">
+                            </div>
+                            <div class="comic-info">
+                                <h3 class="comic-title">第9卷：暗涌</h3>
+                                <div class="comic-meta">
+                                    <span>2023-09-30</span>
+                                    <span>全彩</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- 模拟卡片 5 -->
+                        <article class="comic-card">
+                            <div class="comic-cover">
+                                <img src="https://picsum.photos/seed/comic5/300/420" alt="囚鹤封面">
+                            </div>
+                            <div class="comic-info">
+                                <h3 class="comic-title">第8卷：羁绊</h3>
+                                <div class="comic-meta">
+                                    <span>2023-09-20</span>
+                                    <span>全彩</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- 模拟卡片 6 -->
+                        <article class="comic-card">
+                            <div class="comic-cover">
+                                <img src="https://picsum.photos/seed/comic6/300/420" alt="囚鹤封面">
+                            </div>
+                            <div class="comic-info">
+                                <h3 class="comic-title">第7卷：初遇</h3>
+                                <div class="comic-meta">
+                                    <span>2023-09-15</span>
+                                    <span>全彩</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- 右侧侧边栏 -->
+                <aside>
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">热门排行</h4>
+                        <ul class="rank-list">
+                            <li>
+                                <span class="rank-num">1</span>
+                                <span class="rank-name">囚鹤BY听灯</span>
+                                <span class="rank-score">9.8</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">2</span>
+                                <span class="rank-name">旧日之庭</span>
+                                <span class="rank-score">9.5</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">3</span>
+                                <span class="rank-name">千山茶客</span>
+                                <span class="rank-score">9.4</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">4</span>
+                                <span class="rank-name">不二之臣</span>
+                                <span class="rank-score">9.2</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">5</span>
+                                <span class="rank-name">撒野</span>
+                                <span class="rank-score">9.1</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">6</span>
+                                <span class="rank-name">伪装学渣</span>
+                                <span class="rank-score">9.0</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">热门标签</h4>
+                        <div class="tags-cloud">
+                            <a href="#" class="tag">古风</a>
+                            <a href="#" class="tag">权谋</a>
+                            <a href="#" class="tag">悬疑</a>
+                            <a href="#" class="tag">耽美</a>
+                            <a href="#" class="tag">虐恋</a>
+                            <a href="#" class="tag">救赎</a>
+                            <a href="#" class="tag">HE</a>
+                            <a href="#" class="tag">强强</a>
+                            <a href="#" class="tag">听灯</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">阅读指南</h4>
+                        <p style="font-size: 13px; color: #666; line-height: 1.8;">
+                            本站收录《囚鹤》及相关衍生作品。作品内容纯属虚构，仅供娱乐。请支持正版阅读，感谢您的理解与支持。
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">古风漫画</a></li>
+                        <li><a href="#">现代言情</a></li>
+                        <li><a href="#">校园青春</a></li>
+                        <li><a href="#">悬疑推理</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">阅读常见问题</a></li>
+                        <li><a href="#">会员权益说明</a></li>
+                        <li><a href="#">设备兼容性</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">微博账号</a></li>
+                        <li><a href="#">官方QQ群</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 囚鹤BY听灯 漫画阅读平台. All Rights Reserved. 本站内容仅供学习交流，请勿用于商业用途。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                                                  </html>
